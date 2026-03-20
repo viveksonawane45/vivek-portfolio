@@ -26,11 +26,11 @@
   --glow-purple: 0 0 20px rgba(139,92,246,0.3);
   --r: 12px;
 }
- 
+
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
- 
+
 html { scroll-behavior: smooth; }
- 
+
 body {
   font-family: 'DM Sans', sans-serif;
   background: var(--bg);
@@ -38,18 +38,18 @@ body {
   overflow-x: hidden;
   line-height: 1.6;
 }
- 
+
 /* ── SCROLLBAR ── */
 ::-webkit-scrollbar { width: 4px; }
 ::-webkit-scrollbar-track { background: var(--bg); }
 ::-webkit-scrollbar-thumb { background: var(--blue); border-radius: 2px; }
- 
+
 /* ── CANVAS ── */
 #canvas-bg {
   position: fixed; inset: 0; z-index: 0;
   pointer-events: none; opacity: 0.6;
 }
- 
+
 /* ── NAV ── */
 nav {
   position: fixed; top: 0; left: 0; right: 0; z-index: 100;
@@ -89,7 +89,7 @@ nav {
   transition: opacity 0.2s, box-shadow 0.2s;
 }
 .nav-cta:hover { opacity: 0.85; box-shadow: var(--glow-blue); }
- 
+
 /* ── MAIN LAYOUT ── */
 main { position: relative; z-index: 1; }
 section { padding: 100px 40px; max-width: 1200px; margin: 0 auto; }
@@ -113,7 +113,7 @@ section { padding: 100px 40px; max-width: 1200px; margin: 0 auto; }
   background: linear-gradient(90deg, var(--cyan), var(--purple));
   -webkit-background-clip: text; -webkit-text-fill-color: transparent;
 }
- 
+
 /* ── FADE IN ── */
 .reveal {
   opacity: 0; transform: translateY(30px);
@@ -125,7 +125,7 @@ section { padding: 100px 40px; max-width: 1200px; margin: 0 auto; }
 .reveal-delay-3 { transition-delay: 0.3s; }
 .reveal-delay-4 { transition-delay: 0.4s; }
 .reveal-delay-5 { transition-delay: 0.5s; }
- 
+
 /* ── HERO ── */
 #hero {
   min-height: 100vh;
@@ -154,10 +154,10 @@ section { padding: 100px 40px; max-width: 1200px; margin: 0 auto; }
   animation: dot-blink 1.5s ease-in-out infinite;
 }
 @keyframes dot-blink { 0%,100%{opacity:1} 50%{opacity:0.2} }
- 
+
 .hero-name {
   font-family: 'Syne', sans-serif;
-  font-size: clamp(3rem, 8vw, 7rem);
+  font-size: clamp(2rem, 5vw, 4rem);
   font-weight: 800;
   line-height: 0.95;
   letter-spacing: -0.02em;
@@ -215,7 +215,7 @@ section { padding: 100px 40px; max-width: 1200px; margin: 0 auto; }
   background: transparent;
 }
 .btn-secondary:hover { border-color: var(--cyan); color: var(--cyan); transform: translateY(-2px); }
- 
+
 .hero-stats {
   display: flex; gap: 40px; margin-top: 60px;
   animation: hero-name-in 1s 0.6s cubic-bezier(0.16,1,0.3,1) both;
@@ -230,7 +230,7 @@ section { padding: 100px 40px; max-width: 1200px; margin: 0 auto; }
   font-size: 0.75rem; color: var(--text-dim);
   letter-spacing: 0.06em; text-transform: uppercase;
 }
- 
+
 .hero-visual {
   flex: 1; display: flex; justify-content: center; align-items: center;
   position: relative; min-height: 400px;
@@ -289,7 +289,7 @@ section { padding: 100px 40px; max-width: 1200px; margin: 0 auto; }
 }
 .float-label { font-family: 'JetBrains Mono', monospace; color: var(--cyan); margin-bottom: 4px; }
 .float-val { font-weight: 600; }
- 
+
 /* ── ABOUT ── */
 .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: start; }
 .about-text p { color: var(--text-dim); line-height: 1.8; margin-bottom: 20px; font-weight: 300; font-size: 1.05rem; }
@@ -306,7 +306,7 @@ section { padding: 100px 40px; max-width: 1200px; margin: 0 auto; }
 .tag-blue { color: var(--blue); border-color: rgba(58,126,255,0.3); background: rgba(58,126,255,0.05); }
 .tag-purple { color: var(--purple); border-color: rgba(139,92,246,0.3); background: rgba(139,92,246,0.05); }
 .tag-green { color: var(--green); border-color: rgba(16,233,160,0.3); background: rgba(16,233,160,0.05); }
- 
+
 /* TIMELINE */
 .timeline { position: relative; padding-left: 28px; }
 .timeline::before {
@@ -327,7 +327,7 @@ section { padding: 100px 40px; max-width: 1200px; margin: 0 auto; }
 }
 .tl-title { font-weight: 600; font-size: 1rem; margin-bottom: 4px; }
 .tl-sub { color: var(--text-dim); font-size: 0.85rem; }
- 
+
 /* ── SKILLS ── */
 .skills-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
 .skill-group {
@@ -369,7 +369,7 @@ section { padding: 100px 40px; max-width: 1200px; margin: 0 auto; }
 .skill-fill.purple-fill { background: linear-gradient(90deg, var(--blue), var(--purple)); }
 .skill-fill.green-fill { background: linear-gradient(90deg, var(--green), var(--cyan)); }
 .skill-fill.pink-fill { background: linear-gradient(90deg, var(--purple), var(--pink)); }
- 
+
 /* ── PROJECTS ── */
 .projects-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
 .project-card {
@@ -429,7 +429,7 @@ section { padding: 100px 40px; max-width: 1200px; margin: 0 auto; }
 .proj-btn:hover { border-color: var(--cyan); color: var(--cyan); }
 .proj-btn.filled { background: linear-gradient(135deg, var(--blue), var(--purple)); color: #fff; border-color: transparent; }
 .proj-btn.filled:hover { opacity: 0.85; transform: translateY(-1px); }
- 
+
 /* ── EXPERIENCE ── */
 .exp-timeline { position: relative; }
 .exp-line {
@@ -476,7 +476,7 @@ section { padding: 100px 40px; max-width: 1200px; margin: 0 auto; }
 .exp-points li::before {
   content: '▸'; position:absolute; left:0; color: var(--cyan); font-size: 0.7rem;
 }
- 
+
 /* ── CERTIFICATIONS ── */
 .cert-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
 .cert-card {
@@ -496,7 +496,7 @@ section { padding: 100px 40px; max-width: 1200px; margin: 0 auto; }
 }
 .cert-title { font-family: 'Syne', sans-serif; font-weight: 700; font-size: 0.9rem; margin-bottom: 8px; line-height: 1.3; }
 .cert-org { font-family: 'JetBrains Mono', monospace; font-size: 0.68rem; color: var(--cyan); letter-spacing: 0.06em; }
- 
+
 /* ── GITHUB ── */
 .github-section-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; }
 .github-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
@@ -523,7 +523,7 @@ section { padding: 100px 40px; max-width: 1200px; margin: 0 auto; }
 .c2 { background: rgba(0,212,255,0.3); }
 .c3 { background: rgba(0,212,255,0.55); }
 .c4 { background: rgba(0,212,255,0.85); }
- 
+
 /* ── CONTACT ── */
 .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: start; }
 .contact-info { }
@@ -547,7 +547,7 @@ section { padding: 100px 40px; max-width: 1200px; margin: 0 auto; }
 }
 .contact-label { font-size: 0.72rem; color: var(--text-dim); letter-spacing: 0.06em; text-transform: uppercase; }
 .contact-val { font-weight: 500; font-size: 0.92rem; }
- 
+
 .contact-form { }
 .form-group { margin-bottom: 18px; }
 .form-label { display: block; font-size: 0.75rem; color: var(--text-dim); letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 8px; }
@@ -577,7 +577,7 @@ section { padding: 100px 40px; max-width: 1200px; margin: 0 auto; }
   transition: opacity 0.2s, transform 0.2s, box-shadow 0.2s;
 }
 .form-submit:hover { opacity: 0.85; transform: translateY(-1px); box-shadow: 0 8px 24px rgba(58,126,255,0.35); }
- 
+
 /* ── FOOTER ── */
 footer {
   position: relative; z-index: 1;
@@ -597,7 +597,7 @@ footer {
   transition: border-color 0.2s, color 0.2s, transform 0.2s;
 }
 .social-btn:hover { border-color: var(--cyan); color: var(--cyan); transform: translateY(-2px); }
- 
+
 /* ── MOBILE MENU ── */
 .hamburger {
   display: none; flex-direction: column; gap: 5px;
@@ -618,7 +618,7 @@ footer {
   position: absolute; top: 24px; right: 28px;
   font-size: 1.5rem; cursor: pointer; color: var(--text-dim);
 }
- 
+
 /* ── RESPONSIVE ── */
 @media (max-width: 900px) {
   nav { padding: 14px 20px; }
@@ -647,10 +647,10 @@ footer {
 </style>
 </head>
 <body>
- 
+
 <!-- CANVAS BACKGROUND -->
 <canvas id="canvas-bg"></canvas>
- 
+
 <!-- NAVIGATION -->
 <nav>
   <div class="nav-logo">VS_</div>
@@ -666,7 +666,7 @@ footer {
     <span></span><span></span><span></span>
   </div>
 </nav>
- 
+
 <!-- MOBILE NAV -->
 <div class="mobile-nav" id="mobileNav">
   <span class="mobile-close" onclick="closeMobileNav()">✕</span>
@@ -677,9 +677,9 @@ footer {
   <a href="#certifications" onclick="closeMobileNav()">Certifications</a>
   <a href="#contact" onclick="closeMobileNav()">Contact</a>
 </div>
- 
+
 <main>
- 
+
 <!-- ═══════════════════ HERO ═══════════════════ -->
 <section id="hero" style="max-width:100%;padding-left:10%;padding-right:6%;">
   <div class="hero-content">
@@ -723,7 +723,7 @@ footer {
     </div>
   </div>
 </section>
- 
+
 <!-- ═══════════════════ ABOUT ═══════════════════ -->
 <section id="about">
   <div class="section-label reveal">// About Me</div>
@@ -770,7 +770,7 @@ footer {
     </div>
   </div>
 </section>
- 
+
 <!-- ═══════════════════ SKILLS ═══════════════════ -->
 <section id="skills" style="background: linear-gradient(180deg, transparent, rgba(58,126,255,0.03), transparent);">
   <div class="section-label reveal">// Technical Skills</div>
@@ -841,7 +841,7 @@ footer {
     </div>
   </div>
 </section>
- 
+
 <!-- ═══════════════════ PROJECTS ═══════════════════ -->
 <section id="projects">
   <div class="section-label reveal">// Projects</div>
@@ -947,7 +947,7 @@ footer {
     </div>
   </div>
 </section>
- 
+
 <!-- ═══════════════════ EXPERIENCE ═══════════════════ -->
 <section id="experience" style="background: linear-gradient(180deg, transparent, rgba(139,92,246,0.03), transparent);">
   <div class="section-label reveal">// Experience</div>
@@ -1009,7 +1009,7 @@ footer {
     </div>
   </div>
 </section>
- 
+
 <!-- ═══════════════════ CERTIFICATIONS ═══════════════════ -->
 <section id="certifications">
   <div class="section-label reveal">// Certifications</div>
@@ -1047,7 +1047,7 @@ footer {
     </div>
   </div>
 </section>
- 
+
 <!-- ═══════════════════ GITHUB ═══════════════════ -->
 <section id="github" style="background: linear-gradient(180deg, transparent, rgba(0,212,255,0.03), transparent);">
   <div class="section-label reveal">// Open Source</div>
@@ -1097,7 +1097,7 @@ footer {
     </div>
   </div>
 </section>
- 
+
 <!-- ═══════════════════ CONTACT ═══════════════════ -->
 <section id="contact">
   <div class="section-label reveal">// Contact</div>
@@ -1105,11 +1105,11 @@ footer {
   <div class="contact-grid">
     <div class="contact-info reveal reveal-delay-1">
       <p style="color:var(--text-dim);line-height:1.8;margin-bottom:32px;font-size:1.05rem;font-weight:300;">Open to internships, full-time opportunities, collaborations, and interesting data/AI projects. Let's connect and create impact together.</p>
-      <a href="mailto:sonawanevivek63@gmail.com" class="contact-item">
+      <a href="/cdn-cgi/l/email-protection#097a6667687e68676c7f607f6c623f3a496e64686065276a6664" class="contact-item">
         <div class="contact-icon sg-cyan">✉️</div>
         <div>
           <div class="contact-label">Email</div>
-          <div class="contact-val">sonawanevivek63@gmail.com</div>
+          <div class="contact-val"><span class="__cf_email__" data-cfemail="760519181701171813001f00131d404536111b171f1a5815191b">[email&#160;protected]</span></div>
         </div>
       </a>
       <a href="tel:+919156880887" class="contact-item">
@@ -1161,9 +1161,9 @@ footer {
     </div>
   </div>
 </section>
- 
+
 </main>
- 
+
 <!-- FOOTER -->
 <footer>
   <div class="footer-left">
@@ -1177,25 +1177,25 @@ footer {
     <a href="https://github.com/viveksonawane45" class="social-btn" target="_blank" title="GitHub">
       <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
     </a>
-    <a href="mailto:sonawanevivek63@gmail.com" class="social-btn" title="Email">
+    <a href="/cdn-cgi/l/email-protection#ee9d81808f998f808b9887988b85d8ddae89838f8782c08d8183" class="social-btn" title="Email">
       <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
     </a>
   </div>
 </footer>
- 
-<script>
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
 // ═══════════════════ CANVAS PARTICLE NETWORK ═══════════════════
 const canvas = document.getElementById('canvas-bg');
 const ctx = canvas.getContext('2d');
 let W, H, nodes = [], mouse = { x: -9999, y: -9999 };
- 
+
 function resize() {
   W = canvas.width = window.innerWidth;
   H = canvas.height = window.innerHeight;
 }
 resize();
 window.addEventListener('resize', () => { resize(); initNodes(); });
- 
+
 class Node {
   constructor() { this.reset(); }
   reset() {
@@ -1229,13 +1229,13 @@ class Node {
     ctx.fill();
   }
 }
- 
+
 function initNodes() {
   const count = Math.min(80, Math.floor(W * H / 15000));
   nodes = Array.from({ length: count }, () => new Node());
 }
 initNodes();
- 
+
 function drawConnections() {
   for (let i = 0; i < nodes.length; i++) {
     for (let j = i + 1; j < nodes.length; j++) {
@@ -1270,7 +1270,7 @@ function drawConnections() {
     }
   }
 }
- 
+
 function animate() {
   ctx.clearRect(0, 0, W, H);
   nodes.forEach(n => { n.update(); n.draw(); });
@@ -1278,10 +1278,10 @@ function animate() {
   requestAnimationFrame(animate);
 }
 animate();
- 
+
 document.addEventListener('mousemove', e => { mouse.x = e.clientX; mouse.y = e.clientY; });
 document.addEventListener('mouseleave', () => { mouse.x = -9999; mouse.y = -9999; });
- 
+
 // ═══════════════════ SCROLL REVEAL ═══════════════════
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(e => {
@@ -1294,9 +1294,9 @@ const observer = new IntersectionObserver((entries) => {
     }
   });
 }, { threshold: 0.1 });
- 
+
 document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
- 
+
 // Also trigger skill bars when section comes in
 const skillsObserver = new IntersectionObserver((entries) => {
   entries.forEach(e => {
@@ -1309,7 +1309,7 @@ const skillsObserver = new IntersectionObserver((entries) => {
 }, { threshold: 0.2 });
 const skillsSection = document.getElementById('skills');
 if (skillsSection) skillsObserver.observe(skillsSection);
- 
+
 // ═══════════════════ COUNTER ANIMATION ═══════════════════
 const counterObserver = new IntersectionObserver((entries) => {
   entries.forEach(e => {
@@ -1330,7 +1330,7 @@ const counterObserver = new IntersectionObserver((entries) => {
 }, { threshold: 0.3 });
 const heroStats = document.querySelector('.hero-stats');
 if (heroStats) counterObserver.observe(heroStats);
- 
+
 // ═══════════════════ CONTRIBUTION GRID ═══════════════════
 const grid = document.getElementById('contrib-grid');
 if (grid) {
@@ -1346,11 +1346,11 @@ if (grid) {
     grid.appendChild(cell);
   }
 }
- 
+
 // ═══════════════════ MOBILE NAV ═══════════════════
 function openMobileNav() { document.getElementById('mobileNav').classList.add('open'); }
 function closeMobileNav() { document.getElementById('mobileNav').classList.remove('open'); }
- 
+
 // ═══════════════════ FORM SUBMIT ═══════════════════
 function handleFormSubmit(btn) {
   const original = btn.textContent;
@@ -1363,7 +1363,7 @@ function handleFormSubmit(btn) {
     btn.disabled = false;
   }, 3000);
 }
- 
+
 // ═══════════════════ ACTIVE NAV ═══════════════════
 const sections = document.querySelectorAll('section[id]');
 const navLinks = document.querySelectorAll('.nav-links a');
@@ -1377,15 +1377,6 @@ const navObserver = new IntersectionObserver((entries) => {
   });
 }, { threshold: 0.4 });
 sections.forEach(s => navObserver.observe(s));
- 
+
 // ═══════════════════ PARALLAX ORBS ═══════════════════
-document.addEventListener('mousemove', (e) => {
-  const x = (e.clientX / window.innerWidth - 0.5) * 20;
-  const y = (e.clientY / window.innerHeight - 0.5) * 20;
-  const orb = document.querySelector('.hero-orb');
-  if (orb) orb.style.transform = `translate(${x}px, ${y}px)`;
-});
-</script>
-</body>
-</html>
- 
+d
