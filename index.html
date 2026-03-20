@@ -28,9 +28,7 @@
 }
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
 html { scroll-behavior: smooth; }
-
 body {
   font-family: 'DM Sans', sans-serif;
   background: var(--bg);
@@ -39,18 +37,15 @@ body {
   line-height: 1.6;
 }
 
-/* ── SCROLLBAR ── */
 ::-webkit-scrollbar { width: 4px; }
 ::-webkit-scrollbar-track { background: var(--bg); }
 ::-webkit-scrollbar-thumb { background: var(--blue); border-radius: 2px; }
 
-/* ── CANVAS ── */
 #canvas-bg {
   position: fixed; inset: 0; z-index: 0;
   pointer-events: none; opacity: 0.6;
 }
 
-/* ── NAV ── */
 nav {
   position: fixed; top: 0; left: 0; right: 0; z-index: 100;
   padding: 16px 40px;
@@ -90,7 +85,6 @@ nav {
 }
 .nav-cta:hover { opacity: 0.85; box-shadow: var(--glow-blue); }
 
-/* ── MAIN LAYOUT ── */
 main { position: relative; z-index: 1; }
 section { padding: 100px 40px; max-width: 1200px; margin: 0 auto; }
 .section-label {
@@ -114,7 +108,6 @@ section { padding: 100px 40px; max-width: 1200px; margin: 0 auto; }
   -webkit-background-clip: text; -webkit-text-fill-color: transparent;
 }
 
-/* ── FADE IN ── */
 .reveal {
   opacity: 0; transform: translateY(30px);
   transition: opacity 0.7s ease, transform 0.7s ease;
@@ -126,7 +119,6 @@ section { padding: 100px 40px; max-width: 1200px; margin: 0 auto; }
 .reveal-delay-4 { transition-delay: 0.4s; }
 .reveal-delay-5 { transition-delay: 0.5s; }
 
-/* ── HERO ── */
 #hero {
   min-height: 100vh;
   display: flex; align-items: center;
@@ -290,7 +282,6 @@ section { padding: 100px 40px; max-width: 1200px; margin: 0 auto; }
 .float-label { font-family: 'JetBrains Mono', monospace; color: var(--cyan); margin-bottom: 4px; }
 .float-val { font-weight: 600; }
 
-/* ── ABOUT ── */
 .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: start; }
 .about-text p { color: var(--text-dim); line-height: 1.8; margin-bottom: 20px; font-weight: 300; font-size: 1.05rem; }
 .focus-tags { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 28px; }
@@ -307,7 +298,6 @@ section { padding: 100px 40px; max-width: 1200px; margin: 0 auto; }
 .tag-purple { color: var(--purple); border-color: rgba(139,92,246,0.3); background: rgba(139,92,246,0.05); }
 .tag-green { color: var(--green); border-color: rgba(16,233,160,0.3); background: rgba(16,233,160,0.05); }
 
-/* TIMELINE */
 .timeline { position: relative; padding-left: 28px; }
 .timeline::before {
   content:''; position:absolute; left:0; top:0; bottom:0;
@@ -328,7 +318,6 @@ section { padding: 100px 40px; max-width: 1200px; margin: 0 auto; }
 .tl-title { font-weight: 600; font-size: 1rem; margin-bottom: 4px; }
 .tl-sub { color: var(--text-dim); font-size: 0.85rem; }
 
-/* ── SKILLS ── */
 .skills-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
 .skill-group {
   background: var(--surface);
@@ -370,7 +359,6 @@ section { padding: 100px 40px; max-width: 1200px; margin: 0 auto; }
 .skill-fill.green-fill { background: linear-gradient(90deg, var(--green), var(--cyan)); }
 .skill-fill.pink-fill { background: linear-gradient(90deg, var(--purple), var(--pink)); }
 
-/* ── PROJECTS ── */
 .projects-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
 .project-card {
   background: var(--surface);
@@ -393,10 +381,7 @@ section { padding: 100px 40px; max-width: 1200px; margin: 0 auto; }
   box-shadow: 0 16px 40px rgba(0,0,0,0.4), var(--glow-blue);
 }
 .project-card:hover::before { opacity: 1; }
-.project-banner {
-  height: 6px;
-  background: linear-gradient(90deg, var(--cyan), var(--blue), var(--purple));
-}
+.project-banner { height: 6px; background: linear-gradient(90deg, var(--cyan), var(--blue), var(--purple)); }
 .project-body { padding: 24px; }
 .project-num {
   font-family: 'JetBrains Mono', monospace;
@@ -430,17 +415,13 @@ section { padding: 100px 40px; max-width: 1200px; margin: 0 auto; }
 .proj-btn.filled { background: linear-gradient(135deg, var(--blue), var(--purple)); color: #fff; border-color: transparent; }
 .proj-btn.filled:hover { opacity: 0.85; transform: translateY(-1px); }
 
-/* ── EXPERIENCE ── */
 .exp-timeline { position: relative; }
 .exp-line {
   position: absolute; left: 20px; top: 0; bottom: 0;
   width: 2px;
   background: linear-gradient(to bottom, var(--cyan), var(--purple), transparent);
 }
-.exp-item {
-  display: flex; gap: 40px; margin-bottom: 40px;
-  position: relative;
-}
+.exp-item { display: flex; gap: 40px; margin-bottom: 40px; position: relative; }
 .exp-dot-wrap { width: 40px; flex-shrink: 0; display: flex; justify-content: center; padding-top: 6px; }
 .exp-dot {
   width: 18px; height: 18px; border-radius: 50%;
@@ -473,11 +454,8 @@ section { padding: 100px 40px; max-width: 1200px; margin: 0 auto; }
   font-size: 0.83rem; color: var(--text-dim); padding: 4px 0;
   padding-left: 16px; position: relative; line-height: 1.5;
 }
-.exp-points li::before {
-  content: '▸'; position:absolute; left:0; color: var(--cyan); font-size: 0.7rem;
-}
+.exp-points li::before { content: '▸'; position:absolute; left:0; color: var(--cyan); font-size: 0.7rem; }
 
-/* ── CERTIFICATIONS ── */
 .cert-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
 .cert-card {
   background: var(--surface);
@@ -497,7 +475,6 @@ section { padding: 100px 40px; max-width: 1200px; margin: 0 auto; }
 .cert-title { font-family: 'Syne', sans-serif; font-weight: 700; font-size: 0.9rem; margin-bottom: 8px; line-height: 1.3; }
 .cert-org { font-family: 'JetBrains Mono', monospace; font-size: 0.68rem; color: var(--cyan); letter-spacing: 0.06em; }
 
-/* ── GITHUB ── */
 .github-section-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; }
 .github-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
 .stat-card {
@@ -524,9 +501,7 @@ section { padding: 100px 40px; max-width: 1200px; margin: 0 auto; }
 .c3 { background: rgba(0,212,255,0.55); }
 .c4 { background: rgba(0,212,255,0.85); }
 
-/* ── CONTACT ── */
 .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: start; }
-.contact-info { }
 .contact-item {
   display: flex; align-items: center; gap: 16px;
   padding: 16px;
@@ -548,7 +523,6 @@ section { padding: 100px 40px; max-width: 1200px; margin: 0 auto; }
 .contact-label { font-size: 0.72rem; color: var(--text-dim); letter-spacing: 0.06em; text-transform: uppercase; }
 .contact-val { font-weight: 500; font-size: 0.92rem; }
 
-.contact-form { }
 .form-group { margin-bottom: 18px; }
 .form-label { display: block; font-size: 0.75rem; color: var(--text-dim); letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 8px; }
 .form-input, .form-textarea {
@@ -578,7 +552,6 @@ section { padding: 100px 40px; max-width: 1200px; margin: 0 auto; }
 }
 .form-submit:hover { opacity: 0.85; transform: translateY(-1px); box-shadow: 0 8px 24px rgba(58,126,255,0.35); }
 
-/* ── FOOTER ── */
 footer {
   position: relative; z-index: 1;
   border-top: 1px solid var(--border);
@@ -598,7 +571,6 @@ footer {
 }
 .social-btn:hover { border-color: var(--cyan); color: var(--cyan); transform: translateY(-2px); }
 
-/* ── MOBILE MENU ── */
 .hamburger {
   display: none; flex-direction: column; gap: 5px;
   cursor: pointer; padding: 4px;
@@ -619,7 +591,6 @@ footer {
   font-size: 1.5rem; cursor: pointer; color: var(--text-dim);
 }
 
-/* ── RESPONSIVE ── */
 @media (max-width: 900px) {
   nav { padding: 14px 20px; }
   .nav-links { display: none; }
@@ -648,10 +619,8 @@ footer {
 </head>
 <body>
 
-<!-- CANVAS BACKGROUND -->
 <canvas id="canvas-bg"></canvas>
 
-<!-- NAVIGATION -->
 <nav>
   <div class="nav-logo">VS_</div>
   <ul class="nav-links">
@@ -667,7 +636,6 @@ footer {
   </div>
 </nav>
 
-<!-- MOBILE NAV -->
 <div class="mobile-nav" id="mobileNav">
   <span class="mobile-close" onclick="closeMobileNav()">✕</span>
   <a href="#about" onclick="closeMobileNav()">About</a>
@@ -680,7 +648,7 @@ footer {
 
 <main>
 
-<!-- ═══════════════════ HERO ═══════════════════ -->
+<!-- HERO -->
 <section id="hero" style="max-width:100%;padding-left:10%;padding-right:6%;">
   <div class="hero-content">
     <div class="hero-badge">
@@ -688,7 +656,7 @@ footer {
       Available for opportunities
     </div>
     <h1 class="hero-name">Vivek<br>Sonawane</h1>
-    <div class="hero-subtitle">&gt; AI & Data Science Engineer_</div>
+    <div class="hero-subtitle">&gt; AI &amp; Data Science Engineer_</div>
     <p class="hero-desc">Passionate about turning data into insights using Python, SQL, Power BI, and Cloud technologies. Building intelligent solutions at the intersection of AI and analytics.</p>
     <div class="hero-ctas">
       <a href="#projects" class="btn-primary">View Projects</a>
@@ -724,15 +692,15 @@ footer {
   </div>
 </section>
 
-<!-- ═══════════════════ ABOUT ═══════════════════ -->
+<!-- ABOUT -->
 <section id="about">
   <div class="section-label reveal">// About Me</div>
-  <h2 class="section-title reveal">Building the Future<br><span>with Data & AI</span></h2>
+  <h2 class="section-title reveal">Building the Future<br><span>with Data &amp; AI</span></h2>
   <div class="about-grid">
     <div class="about-text reveal reveal-delay-1">
-      <p>I'm a final-year Artificial Intelligence & Data Science Engineering student at the International School of Business & Media, Pune — graduating May 2026. I thrive at the intersection of data, code, and creative problem-solving.</p>
+      <p>I'm a final-year Artificial Intelligence &amp; Data Science Engineering student at the International School of Business &amp; Media, Pune — graduating May 2026. I thrive at the intersection of data, code, and creative problem-solving.</p>
       <p>From cleaning raw datasets to building interactive Power BI dashboards, deploying cloud applications on GCP, and developing full-stack web solutions — I've consistently bridged technical depth with business impact across diverse internships.</p>
-      <p>Currently pursuing an Advanced Certification from E&ICT Academy, IIT Guwahati, deepening my expertise in real-world data science and analytics workflows.</p>
+      <p>Currently pursuing an Advanced Certification from E&amp;ICT Academy, IIT Guwahati, deepening my expertise in real-world data science and analytics workflows.</p>
       <div class="focus-tags">
         <span class="focus-tag tag-cyan">Data Analytics</span>
         <span class="focus-tag tag-blue">Data Visualization</span>
@@ -747,8 +715,8 @@ footer {
         <div class="tl-dot"></div>
         <div>
           <div class="tl-year">2026 (Expected)</div>
-          <div class="tl-title">B.E. AI & Data Science</div>
-          <div class="tl-sub">International School of Business & Media, Pune</div>
+          <div class="tl-title">B.E. AI &amp; Data Science</div>
+          <div class="tl-sub">International School of Business &amp; Media, Pune</div>
         </div>
       </div>
       <div class="tl-item">
@@ -756,7 +724,7 @@ footer {
         <div>
           <div class="tl-year">2025 — 2026</div>
           <div class="tl-title">Advanced Certification — Data Science</div>
-          <div class="tl-sub">E&ICT Academy, IIT Guwahati</div>
+          <div class="tl-sub">E&amp;ICT Academy, IIT Guwahati</div>
         </div>
       </div>
       <div class="tl-item">
@@ -771,15 +739,14 @@ footer {
   </div>
 </section>
 
-<!-- ═══════════════════ SKILLS ═══════════════════ -->
+<!-- SKILLS -->
 <section id="skills" style="background: linear-gradient(180deg, transparent, rgba(58,126,255,0.03), transparent);">
   <div class="section-label reveal">// Technical Skills</div>
-  <h2 class="section-title reveal">Expertise &<br><span>Tech Stack</span></h2>
+  <h2 class="section-title reveal">Expertise &amp;<br><span>Tech Stack</span></h2>
   <div class="skills-grid">
-    <!-- Programming -->
     <div class="skill-group reveal reveal-delay-1">
       <div class="skill-group-icon sg-cyan">⚡</div>
-      <div class="skill-group-title">Programming & Analytics</div>
+      <div class="skill-group-title">Programming &amp; Analytics</div>
       <div class="skill-bar-item">
         <div class="skill-bar-header"><span class="skill-name">Python</span><span class="skill-pct">88%</span></div>
         <div class="skill-track"><div class="skill-fill cyan-fill" data-w="88"></div></div>
@@ -797,10 +764,9 @@ footer {
         <div class="skill-track"><div class="skill-fill cyan-fill" data-w="75"></div></div>
       </div>
     </div>
-    <!-- Data & BI -->
     <div class="skill-group reveal reveal-delay-2">
       <div class="skill-group-icon sg-purple">📊</div>
-      <div class="skill-group-title">Data & Business Intelligence</div>
+      <div class="skill-group-title">Data &amp; Business Intelligence</div>
       <div class="skill-bar-item">
         <div class="skill-bar-header"><span class="skill-name">Power BI</span><span class="skill-pct">87%</span></div>
         <div class="skill-track"><div class="skill-fill purple-fill" data-w="87"></div></div>
@@ -818,10 +784,9 @@ footer {
         <div class="skill-track"><div class="skill-fill purple-fill" data-w="82"></div></div>
       </div>
     </div>
-    <!-- Cloud -->
     <div class="skill-group reveal reveal-delay-3">
       <div class="skill-group-icon sg-green">☁️</div>
-      <div class="skill-group-title">Cloud & Web</div>
+      <div class="skill-group-title">Cloud &amp; Web</div>
       <div class="skill-bar-item">
         <div class="skill-bar-header"><span class="skill-name">Google Cloud Platform</span><span class="skill-pct">78%</span></div>
         <div class="skill-track"><div class="skill-fill green-fill" data-w="78"></div></div>
@@ -831,7 +796,7 @@ footer {
         <div class="skill-track"><div class="skill-fill green-fill" data-w="70"></div></div>
       </div>
       <div class="skill-bar-item">
-        <div class="skill-bar-header"><span class="skill-name">HTML & CSS</span><span class="skill-pct">88%</span></div>
+        <div class="skill-bar-header"><span class="skill-name">HTML &amp; CSS</span><span class="skill-pct">88%</span></div>
         <div class="skill-track"><div class="skill-fill green-fill" data-w="88"></div></div>
       </div>
       <div class="skill-bar-item">
@@ -842,7 +807,7 @@ footer {
   </div>
 </section>
 
-<!-- ═══════════════════ PROJECTS ═══════════════════ -->
+<!-- PROJECTS -->
 <section id="projects">
   <div class="section-label reveal">// Projects</div>
   <h2 class="section-title reveal">Featured<br><span>Work</span></h2>
@@ -854,10 +819,7 @@ footer {
         <div class="project-title">Power BI Business Analytics Dashboard</div>
         <div class="project-desc">End-to-end BI dashboard with KPI tracking, trend analysis, and interactive visualizations for real-world business decision-making.</div>
         <div class="tech-stack">
-          <span class="tech-tag">Power BI</span>
-          <span class="tech-tag">DAX</span>
-          <span class="tech-tag">SQL</span>
-          <span class="tech-tag">Excel</span>
+          <span class="tech-tag">Power BI</span><span class="tech-tag">DAX</span><span class="tech-tag">SQL</span><span class="tech-tag">Excel</span>
         </div>
         <div class="project-links">
           <a href="https://github.com/viveksonawane45" class="proj-btn" target="_blank">GitHub</a>
@@ -869,13 +831,10 @@ footer {
       <div class="project-banner" style="background:linear-gradient(90deg,#3a7eff,#8b5cf6)"></div>
       <div class="project-body">
         <div class="project-num">02 / PROJECT</div>
-        <div class="project-title">SQL Data Analysis & Reporting</div>
+        <div class="project-title">SQL Data Analysis &amp; Reporting</div>
         <div class="project-desc">Complex multi-table SQL queries, stored procedures, and automated reporting pipelines to extract actionable insights from large datasets.</div>
         <div class="tech-stack">
-          <span class="tech-tag">MySQL</span>
-          <span class="tech-tag">Python</span>
-          <span class="tech-tag">Pandas</span>
-          <span class="tech-tag">Jupyter</span>
+          <span class="tech-tag">MySQL</span><span class="tech-tag">Python</span><span class="tech-tag">Pandas</span><span class="tech-tag">Jupyter</span>
         </div>
         <div class="project-links">
           <a href="https://github.com/viveksonawane45" class="proj-btn" target="_blank">GitHub</a>
@@ -887,13 +846,10 @@ footer {
       <div class="project-banner" style="background:linear-gradient(90deg,#8b5cf6,#f472b6)"></div>
       <div class="project-body">
         <div class="project-num">03 / PROJECT</div>
-        <div class="project-title">Python Data Cleaning & EDA</div>
+        <div class="project-title">Python Data Cleaning &amp; EDA</div>
         <div class="project-desc">Comprehensive exploratory data analysis pipeline with automated data cleaning, statistical summaries, and Matplotlib/Seaborn visualizations.</div>
         <div class="tech-stack">
-          <span class="tech-tag">Python</span>
-          <span class="tech-tag">Pandas</span>
-          <span class="tech-tag">Seaborn</span>
-          <span class="tech-tag">NumPy</span>
+          <span class="tech-tag">Python</span><span class="tech-tag">Pandas</span><span class="tech-tag">Seaborn</span><span class="tech-tag">NumPy</span>
         </div>
         <div class="project-links">
           <a href="https://github.com/viveksonawane45" class="proj-btn" target="_blank">GitHub</a>
@@ -908,10 +864,7 @@ footer {
         <div class="project-title">Google Cloud Hosted Application</div>
         <div class="project-desc">Scalable cloud-native application deployed on GCP with App Engine, Cloud Storage, and automated CI/CD pipelines for reliable performance.</div>
         <div class="tech-stack">
-          <span class="tech-tag">GCP</span>
-          <span class="tech-tag">App Engine</span>
-          <span class="tech-tag">Docker</span>
-          <span class="tech-tag">Python</span>
+          <span class="tech-tag">GCP</span><span class="tech-tag">App Engine</span><span class="tech-tag">Docker</span><span class="tech-tag">Python</span>
         </div>
         <div class="project-links">
           <a href="https://github.com/viveksonawane45" class="proj-btn" target="_blank">GitHub</a>
@@ -926,10 +879,7 @@ footer {
         <div class="project-title">Web Application using React</div>
         <div class="project-desc">Full-featured React application with component-based architecture, REST API integration, responsive design, and modern state management.</div>
         <div class="tech-stack">
-          <span class="tech-tag">React</span>
-          <span class="tech-tag">JavaScript</span>
-          <span class="tech-tag">CSS</span>
-          <span class="tech-tag">REST API</span>
+          <span class="tech-tag">React</span><span class="tech-tag">JavaScript</span><span class="tech-tag">CSS</span><span class="tech-tag">REST API</span>
         </div>
         <div class="project-links">
           <a href="https://github.com/viveksonawane45" class="proj-btn" target="_blank">GitHub</a>
@@ -948,7 +898,7 @@ footer {
   </div>
 </section>
 
-<!-- ═══════════════════ EXPERIENCE ═══════════════════ -->
+<!-- EXPERIENCE -->
 <section id="experience" style="background: linear-gradient(180deg, transparent, rgba(139,92,246,0.03), transparent);">
   <div class="section-label reveal">// Experience</div>
   <h2 class="section-title reveal">Professional<br><span>Journey</span></h2>
@@ -958,7 +908,7 @@ footer {
       <div class="exp-dot-wrap"><div class="exp-dot" style="border-color:var(--cyan)"></div></div>
       <div class="exp-card">
         <div class="exp-period">DEC 2025 — MAR 2026</div>
-        <div class="exp-role">Data Analytics & Science Intern</div>
+        <div class="exp-role">Data Analytics &amp; Science Intern</div>
         <div class="exp-company">NexGen Analytix</div>
         <ul class="exp-points">
           <li>Performed data cleaning, preprocessing, and exploratory data analysis (EDA) on structured datasets</li>
@@ -998,7 +948,7 @@ footer {
       <div class="exp-dot-wrap"><div class="exp-dot" style="border-color:var(--purple)"></div></div>
       <div class="exp-card">
         <div class="exp-period">OCT 2023 — JUN 2024</div>
-        <div class="exp-role">Product Development & Training Intern</div>
+        <div class="exp-role">Product Development &amp; Training Intern</div>
         <div class="exp-company">Black Orange Talent</div>
         <ul class="exp-points">
           <li>Gained experience in conceptualizing, designing, and refining products through the full lifecycle</li>
@@ -1010,15 +960,15 @@ footer {
   </div>
 </section>
 
-<!-- ═══════════════════ CERTIFICATIONS ═══════════════════ -->
+<!-- CERTIFICATIONS -->
 <section id="certifications">
   <div class="section-label reveal">// Certifications</div>
-  <h2 class="section-title reveal">Learning &<br><span>Recognition</span></h2>
+  <h2 class="section-title reveal">Learning &amp;<br><span>Recognition</span></h2>
   <div class="cert-grid">
     <div class="cert-card reveal reveal-delay-1">
       <div class="cert-icon sg-cyan">🎓</div>
-      <div class="cert-title">Advanced Certification in Data Science & Analytics</div>
-      <div class="cert-org">IIT Guwahati · E&ICT Academy</div>
+      <div class="cert-title">Advanced Certification in Data Science &amp; Analytics</div>
+      <div class="cert-org">IIT Guwahati · E&amp;ICT Academy</div>
     </div>
     <div class="cert-card reveal reveal-delay-2">
       <div class="cert-icon sg-blue">🗄️</div>
@@ -1028,7 +978,7 @@ footer {
     <div class="cert-card reveal reveal-delay-3">
       <div class="cert-icon" style="background:rgba(255,200,0,0.1);font-size:1.6rem;width:56px;height:56px;border-radius:14px;display:flex;align-items:center;justify-content:center;margin:0 auto 16px;">🏦</div>
       <div class="cert-title">Software Engineering Job Simulation</div>
-      <div class="cert-org">JPMorgan Chase & Co. · Forage</div>
+      <div class="cert-org">JPMorgan Chase &amp; Co. · Forage</div>
     </div>
     <div class="cert-card reveal reveal-delay-4">
       <div class="cert-icon" style="background:rgba(66,133,244,0.1);font-size:1.6rem;width:56px;height:56px;border-radius:14px;display:flex;align-items:center;justify-content:center;margin:0 auto 16px;">☁️</div>
@@ -1038,7 +988,7 @@ footer {
     <div class="cert-card reveal reveal-delay-1">
       <div class="cert-icon sg-purple">💹</div>
       <div class="cert-title">Cryptocurrency Course</div>
-      <div class="cert-org">Blockchain & Crypto</div>
+      <div class="cert-org">Blockchain &amp; Crypto</div>
     </div>
     <div class="cert-card reveal reveal-delay-2">
       <div class="cert-icon sg-green">🚀</div>
@@ -1048,10 +998,10 @@ footer {
   </div>
 </section>
 
-<!-- ═══════════════════ GITHUB ═══════════════════ -->
+<!-- GITHUB -->
 <section id="github" style="background: linear-gradient(180deg, transparent, rgba(0,212,255,0.03), transparent);">
   <div class="section-label reveal">// Open Source</div>
-  <h2 class="section-title reveal">GitHub &<br><span>Contributions</span></h2>
+  <h2 class="section-title reveal">GitHub &amp;<br><span>Contributions</span></h2>
   <div class="github-section-inner">
     <div>
       <div class="github-stats">
@@ -1098,18 +1048,18 @@ footer {
   </div>
 </section>
 
-<!-- ═══════════════════ CONTACT ═══════════════════ -->
+<!-- CONTACT -->
 <section id="contact">
   <div class="section-label reveal">// Contact</div>
   <h2 class="section-title reveal">Let's Build<br><span>Something Together</span></h2>
   <div class="contact-grid">
-    <div class="contact-info reveal reveal-delay-1">
+    <div class="reveal reveal-delay-1">
       <p style="color:var(--text-dim);line-height:1.8;margin-bottom:32px;font-size:1.05rem;font-weight:300;">Open to internships, full-time opportunities, collaborations, and interesting data/AI projects. Let's connect and create impact together.</p>
-      <a href="/cdn-cgi/l/email-protection#097a6667687e68676c7f607f6c623f3a496e64686065276a6664" class="contact-item">
+      <a href="mailto:viveksonawane452@gmail.com" class="contact-item">
         <div class="contact-icon sg-cyan">✉️</div>
         <div>
           <div class="contact-label">Email</div>
-          <div class="contact-val"><span class="__cf_email__" data-cfemail="760519181701171813001f00131d404536111b171f1a5815191b">[email&#160;protected]</span></div>
+          <div class="contact-val">viveksonawane452@gmail.com</div>
         </div>
       </a>
       <a href="tel:+919156880887" class="contact-item">
@@ -1140,7 +1090,7 @@ footer {
         <span style="font-size:0.82rem;color:var(--green);">Available for opportunities · Pune, India</span>
       </div>
     </div>
-    <div class="contact-form reveal reveal-delay-2">
+    <div class="reveal reveal-delay-2">
       <div class="form-group">
         <label class="form-label">Name</label>
         <input type="text" class="form-input" placeholder="Your full name">
@@ -1164,7 +1114,6 @@ footer {
 
 </main>
 
-<!-- FOOTER -->
 <footer>
   <div class="footer-left">
     © 2026 <strong>Vivek Sonawane</strong> — Built with passion for data and technology.
@@ -1177,14 +1126,14 @@ footer {
     <a href="https://github.com/viveksonawane45" class="social-btn" target="_blank" title="GitHub">
       <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
     </a>
-    <a href="/cdn-cgi/l/email-protection#ee9d81808f998f808b9887988b85d8ddae89838f8782c08d8183" class="social-btn" title="Email">
+    <a href="mailto:viveksonawane452@gmail.com" class="social-btn" title="Email">
       <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
     </a>
   </div>
 </footer>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
-// ═══════════════════ CANVAS PARTICLE NETWORK ═══════════════════
+<script>
+// CANVAS PARTICLE NETWORK
 const canvas = document.getElementById('canvas-bg');
 const ctx = canvas.getContext('2d');
 let W, H, nodes = [], mouse = { x: -9999, y: -9999 };
@@ -1218,7 +1167,6 @@ class Node {
     const dx = this.x - mouse.x, dy = this.y - mouse.y;
     const md = Math.sqrt(dx*dx + dy*dy);
     const glow = md < 120 ? 1 - md/120 : 0;
-    
     ctx.beginPath();
     ctx.arc(this.x, this.y, pr, 0, Math.PI*2);
     if (glow > 0) {
@@ -1256,7 +1204,6 @@ function drawConnections() {
         ctx.stroke();
       }
     }
-    // Mouse connections
     const dx = nodes[i].x - mouse.x, dy = nodes[i].y - mouse.y;
     const d = Math.sqrt(dx*dx + dy*dy);
     if (d < 180) {
@@ -1282,22 +1229,19 @@ animate();
 document.addEventListener('mousemove', e => { mouse.x = e.clientX; mouse.y = e.clientY; });
 document.addEventListener('mouseleave', () => { mouse.x = -9999; mouse.y = -9999; });
 
-// ═══════════════════ SCROLL REVEAL ═══════════════════
+// SCROLL REVEAL
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(e => {
     if (e.isIntersecting) {
       e.target.classList.add('visible');
-      // Animate skill bars
       e.target.querySelectorAll('.skill-fill').forEach(bar => {
         setTimeout(() => { bar.style.transform = `scaleX(${bar.dataset.w / 100})`; }, 200);
       });
     }
   });
 }, { threshold: 0.1 });
-
 document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
-// Also trigger skill bars when section comes in
 const skillsObserver = new IntersectionObserver((entries) => {
   entries.forEach(e => {
     if (e.isIntersecting) {
@@ -1310,7 +1254,7 @@ const skillsObserver = new IntersectionObserver((entries) => {
 const skillsSection = document.getElementById('skills');
 if (skillsSection) skillsObserver.observe(skillsSection);
 
-// ═══════════════════ COUNTER ANIMATION ═══════════════════
+// COUNTER ANIMATION
 const counterObserver = new IntersectionObserver((entries) => {
   entries.forEach(e => {
     if (e.isIntersecting) {
@@ -1331,10 +1275,9 @@ const counterObserver = new IntersectionObserver((entries) => {
 const heroStats = document.querySelector('.hero-stats');
 if (heroStats) counterObserver.observe(heroStats);
 
-// ═══════════════════ CONTRIBUTION GRID ═══════════════════
+// CONTRIBUTION GRID
 const grid = document.getElementById('contrib-grid');
 if (grid) {
-  const pattern = [0,0,1,0,2,0,1,3,2,0,1,0,4,3,2,1,0,2,3,0,1,0,2,4,3,2];
   for (let i = 0; i < 26 * 7; i++) {
     const cell = document.createElement('div');
     cell.className = 'contrib-cell';
@@ -1347,11 +1290,11 @@ if (grid) {
   }
 }
 
-// ═══════════════════ MOBILE NAV ═══════════════════
+// MOBILE NAV
 function openMobileNav() { document.getElementById('mobileNav').classList.add('open'); }
 function closeMobileNav() { document.getElementById('mobileNav').classList.remove('open'); }
 
-// ═══════════════════ FORM SUBMIT ═══════════════════
+// FORM SUBMIT
 function handleFormSubmit(btn) {
   const original = btn.textContent;
   btn.textContent = 'Message Sent! ✓';
@@ -1364,7 +1307,7 @@ function handleFormSubmit(btn) {
   }, 3000);
 }
 
-// ═══════════════════ ACTIVE NAV ═══════════════════
+// ACTIVE NAV
 const sections = document.querySelectorAll('section[id]');
 const navLinks = document.querySelectorAll('.nav-links a');
 const navObserver = new IntersectionObserver((entries) => {
@@ -1378,5 +1321,12 @@ const navObserver = new IntersectionObserver((entries) => {
 }, { threshold: 0.4 });
 sections.forEach(s => navObserver.observe(s));
 
-// ═══════════════════ PARALLAX ORBS ═══════════════════
-d
+// PARALLAX
+window.addEventListener('scroll', () => {
+  const y = window.scrollY;
+  const orb = document.querySelector('.hero-orb');
+  if (orb) orb.style.transform = `translateY(${y * 0.15}px)`;
+});
+</script>
+</body>
+</html>
